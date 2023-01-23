@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador de texto</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet"> 
+    <script src="https://kit.fontawesome.com/6126743b7b.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <img src="./img/logo.png" alt="Logo Alura" class="logo-alura">
+    </header>
+    <main class="container">
+        <section class="contenidoIzquierdo">
+            <div class="cajaMensaje">
+                <textarea id="textareaMensaje" name="" cols="30" rows="10" class="mensaje" placeholder="Ingrese el texto aqui" onKeyUp="document.getElementById(this.id).value=document.getElementById(this.id).value.toLowerCase()"></textarea>
+            </div>          
+            <div class="botones">
+                <button type="button" id="btnEncriptar" class="encriptar">Encriptar</button>
+                <button type="button" id="btnDesencriptar" class="desencriptar">Desencriptar</button>
+            </div>
+        </section>
+        <section class="contenidoDerecho">
+            <div class="cajaMensaje2">
+                <div id="mostrar" class="oculto">
+                    <div class="cajaResultado">
+                        <textarea name="" id="textareaResultado" cols="30" rows="10" class="resultado" placeholder=""></textarea>
+                    </div>
+                    <div class="botonCopy">
+                        <button type="button" id="btnCopiar" class="copiar">Copiar</button>
+                    </div>
+                </div>
+                <div id="ocultar"  class="cont-info activo">
+                    <img src="./img/ninoencript.png" alt="Niño con lupa" class="munheco">
+                    <h2 class="info-1">Ningún mensaje fue encontrado</h2>
+                    <p class="info-2">Ingresa el texto que desees encriptar o desencriptar.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+               <div>
+            <p class="copyright">&copy; Challenge realizado por <a class="copyright" href="https://github.com/raptor2089/">Ronald Galdamez</a> para el programa ONE de Alura Latam y Oracle - 2023</p>
+        </div>
+    </footer>
+    <script src="./javascript/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.0/dist/sweetalert2.all.min.js"></script>    
+</body>
+</html>
